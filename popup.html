@@ -1,0 +1,75 @@
+<html>
+  <meta charset="UTF-8" />
+  <style>
+    
+    html,body {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        padding: 12px;
+    }
+
+    button {
+      background: linear-gradient(to bottom right, rgb(136, 253, 243), rgb(194, 108, 252));
+      border: none;
+      color: white;
+      font-size: 16px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      height: 36px;
+      font-weight: bold;
+      transition: all 0.15s;
+    }
+
+    button:hover {
+        filter: brightness(105%);
+    }
+
+    button:active {
+        filter: brightness(95%);
+    }
+
+    button:disabled {
+      background: #999;
+      cursor: default;
+    }
+
+    .content {
+      color: #333;
+      font-size: 14px;
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-top: 16px;
+      padding: 12px;
+      min-height: 100px;
+    }
+
+    .content .placeholder {
+      color: #999;
+      font-size: 12px;
+    }
+
+    .desc {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 12px;
+      margin-top: 8px;
+    height: 14px;
+      white-space: nowrap;
+    }
+  </style>
+  <body>
+    <div>
+      <button id="summaryButton">提取摘要</button>
+      <div class="desc">使用文心一言提取微信公众号文章摘要</div>
+    </div>
+    <div class="content" id="content">
+      <span class="placeholder">暂未提取摘要</span>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
